@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Text displayer!</title>
+    <script>
+      function Write() {
+        var txt = document.getElementById('txt');
+        var p = document.getElementById('output');
+        var t = txt.value.replace(/\n/g, '<br>\n');
+        var format = txt.value.replace(/\n/g,'<br>');
+        var interval = setInterval(function(){p.innerHTML = t;document.cookie = 'text=' + format + ';path=/output-text';clearInterval(interval);document.getElementById('display').contentWindow.location.reload();},1000);
+      };
+    </script>
+    <style>
+      #output {
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="txt" oninput="Write()" style="width:100%" width="100%" rows="10">Put text here.</textarea><p id="output" style="font-size:30px">Put text there.</p>
+    <p>
+      This is what is at that website:
+    </p>
+    <iframe src="https://pincescpu987.github.io/output-text/" id="display" width="100%" height="25%"></iframe><br/>
+    <input type="button" value="Open in new tab" onclick="var win = window.open('https://pincescpu987.github.io/output-text/');">
+  </body>
+</html>

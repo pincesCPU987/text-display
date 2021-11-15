@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script>
+      window.onload = function(){
+        var cook = document.cookie;
+        var p = document.getElementById('p');
+        var format = document.cookie.replace('text=','');
+        format = format.replace(';','');p.innerHTML = format;
+        format = format.replace(/\n/g, '<br>\n');
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      body {
+        font-family:'Press Start 2P',cursive;
+        background-color:black;
+      }
+      p {
+        color:white;
+      }
+      h1 {
+        color:red;
+      }
+      #p {
+        word-wrap: break-word;
+      }
+     </style>
+  </head>
+  <body>
+    <h1>Text display</h1>
+    <p style="font-size:30" id="p"></p>
+  </body>
+</html>
