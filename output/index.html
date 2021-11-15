@@ -4,9 +4,9 @@
       window.onload = function(){
         var cook = document.cookie;
         var p = document.getElementById('p');
-        var format = document.cookie.replace('text=','');
+        var cook = document.cookie;
+        var format = cook.replace('text=','');
         format = format.replace(';','');p.innerHTML = format;
-        format = format.replace(/\n/g, '<br>\n');
       }
     </script>
     <style>
