@@ -7,7 +7,7 @@
         var p = document.getElementById('output');
         var t = txt.value.replace(/\n/g, '<br>\n');
         var format = txt.value.replace(/\n/g,'<br>');
-        var interval = setInterval(function(){p.innerHTML = t;document.cookie = 'text=' + format + ';path=/output-text';clearInterval(interval);document.getElementById('display').contentWindow.location.reload();},1000);
+        var interval = setInterval(function(){p.innerHTML = t;document.cookie = 'text=' + format + ';path=/';clearInterval(interval);document.getElementById('display').contentWindow.location.reload();},1000);
       };
     </script>
     <style>
